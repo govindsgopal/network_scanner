@@ -24,11 +24,11 @@ def scan_single_host():
 			print("Name:",host[1]['name'])		
 	except:
 		print("Permission denied, please use sudo .... ")
-def sacn_range():
-	ip = input("Enter the IP : ")
+def scan_range():
+	ip = input("Enter the IP rnage : ")
 	print("Wait........................")
 	try:
-		scan = nm.scan(hosts=ip,arguments = "-sS -O -Pn")
+		scan = nm.scan(hosts=ip,arguments = " -O -Pn")
 		for host in scan["scan"]:
 			print("Ip range:",host)
 	except:
@@ -59,7 +59,7 @@ def aggr_scan():
 				print(f"osgen :",{j['osgen']})
 	except:
 		print("Permission denied, please use sudo .... ")
-def scan_arp_packet():
+def scan_ARP_packet():
 	ip_address = input("\tEnter the IP : ")
 	print("Wait........................")
 	try:
